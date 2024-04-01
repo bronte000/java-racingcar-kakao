@@ -1,5 +1,6 @@
-package racingcar;
+package racingcar.controller;
 
+import racingcar.controller.RacingCarGame;
 import racingcar.view.Input;
 import racingcar.view.ResultView;
 
@@ -10,10 +11,10 @@ public class Main {
         int count = Input.getGameCount();
 
         ResultView.printGameProcessTitle();
-        racingCarGame.printGameBoard();
+        ResultView.printGameBoard(racingCarGame.makeGameBoard());
         for (int i = 0; i < count; i++) {
             racingCarGame.processOneTurn();
-            racingCarGame.printGameBoard();
+            ResultView.printGameBoard(racingCarGame.makeGameBoard());
         }
         ResultView.printGameWinner(racingCarGame.decideWinner());
     }

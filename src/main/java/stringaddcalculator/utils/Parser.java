@@ -1,4 +1,6 @@
-package stringaddcalculator;
+package stringaddcalculator.utils;
+
+import stringaddcalculator.model.PositiveNumber;
 
 import java.util.List;
 import java.util.regex.Matcher;

@@ -1,4 +1,7 @@
-package stringaddcalculator;
+package stringaddcalculator.controller;
+
+import stringaddcalculator.utils.Parser;
+import stringaddcalculator.model.PositiveNumber;
 
 import java.util.List;
 

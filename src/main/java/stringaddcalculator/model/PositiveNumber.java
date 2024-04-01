@@ -1,4 +1,4 @@
-package stringaddcalculator;
+package stringaddcalculator.model;
 
 import java.util.Objects;
 

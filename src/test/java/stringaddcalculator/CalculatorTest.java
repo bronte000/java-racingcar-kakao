@@ -1,6 +1,8 @@
 package stringaddcalculator;
 
 import org.junit.jupiter.api.Test;
+import stringaddcalculator.controller.Calculator;
+import stringaddcalculator.model.PositiveNumber;
 
 import java.util.List;
 

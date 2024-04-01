@@ -1,6 +1,7 @@
-package racingcar;
+package racingcar.controller;
 
-import racingcar.view.ResultView;
+import racingcar.model.Car;
+import racingcar.model.RacingCarDice;
 
 import java.util.Arrays;
 import java.util.List;
@@ -43,7 +44,9 @@ public class RacingCarGame {
                 .collect(Collectors.toList());
     }
 
-    public void printGameBoard() {
-        ResultView.printGameBoard(cars);
+    public String makeGameBoard() {
+        return cars.stream()
+                .map(car -> car.getName() + " : " + "-".repeat(car.getPosition()))
+                .reduce("", (car1, car2) -> car1 + car2 + "\n");
     }
 }

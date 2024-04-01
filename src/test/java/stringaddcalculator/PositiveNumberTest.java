@@ -1,6 +1,7 @@
 package stringaddcalculator;
 
 import org.junit.jupiter.api.Test;
+import stringaddcalculator.model.PositiveNumber;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
