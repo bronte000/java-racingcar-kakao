@@ -1,4 +1,4 @@
-package stringaddcalculator;
+package stringaddcalculator.model;
 
 import org.junit.jupiter.api.Test;
 import stringaddcalculator.model.PositiveNumber;

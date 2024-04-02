@@ -1,4 +1,4 @@
-package stringaddcalculator.controller;
+package stringaddcalculator.model;
 
 import stringaddcalculator.utils.Parser;
 import stringaddcalculator.model.PositiveNumber;

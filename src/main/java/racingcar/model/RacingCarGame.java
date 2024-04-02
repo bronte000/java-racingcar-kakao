@@ -1,4 +1,4 @@
-package racingcar.controller;
+package racingcar.model;
 
 import racingcar.model.Car;
 import racingcar.model.RacingCarDice;
@@ -10,25 +10,27 @@ import java.util.stream.Collectors;
 public class RacingCarGame {
 
     private final List<Car> cars;
+    private final RacingCarDice dice;
 
-    public RacingCarGame(List<Car> cars) {
+    public RacingCarGame(List<Car> cars, RacingCarDice dice) {
         this.cars = cars;
+        this.dice = dice;
     }
 
-    public RacingCarGame(String[] inputs) {
+    public RacingCarGame(String[] inputs, RacingCarDice dice) {
         this(Arrays.stream(inputs)
                 .map(String::trim)
                 .map(Car::new)
-                .collect(Collectors.toList()));
+                .collect(Collectors.toList()), dice);
     }
 
-    public RacingCarGame(String input) {
-        this(input.split(","));
+    public RacingCarGame(String input, RacingCarDice dice) {
+        this(input.split(","), dice);
     }
 
     public void processOneTurn() {
         for (Car car : cars) {
-            int diceResult = RacingCarDice.throwOnce();
+            int diceResult = dice.throwOnce();
             car.moveWithDiceNum(diceResult);
         }
     }

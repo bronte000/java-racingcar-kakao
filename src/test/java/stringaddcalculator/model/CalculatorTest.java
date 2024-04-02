@@ -1,7 +1,7 @@
-package stringaddcalculator;
+package stringaddcalculator.model;
 
 import org.junit.jupiter.api.Test;
-import stringaddcalculator.controller.Calculator;
+import stringaddcalculator.model.Calculator;
 import stringaddcalculator.model.PositiveNumber;
 
 import java.util.List;

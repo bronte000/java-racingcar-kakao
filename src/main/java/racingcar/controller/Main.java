@@ -1,13 +1,15 @@
 package racingcar.controller;
 
-import racingcar.controller.RacingCarGame;
+import racingcar.model.RacingCarDice;
+import racingcar.model.RacingCarGame;
 import racingcar.view.Input;
 import racingcar.view.ResultView;
 
 public class Main {
 
     public static void main(String[] args) {
-        RacingCarGame racingCarGame = new RacingCarGame(Input.getRacingCars());
+        RacingCarDice dice = new RacingCarDice();
+        RacingCarGame racingCarGame = new RacingCarGame(Input.getRacingCars(), dice);
         int count = Input.getGameCount();
 
         ResultView.printGameProcessTitle();
